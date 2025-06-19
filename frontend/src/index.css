@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@keyframes bounceDelay {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+.bounce-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 2px;
+  background-color: #6b7280; /* Tailwind's gray-400 */
+  border-radius: 50%;
+  animation: bounceDelay 1.4s infinite ease-in-out both;
+}
+.bounce-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.bounce-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+.bounce-dot:nth-child(3) {
+  animation-delay: 0;
+}
+
+/* Optional: smooth scrolling for chat and custom scrollbar styling */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
